@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<script>
+function findJobs() {
+  var jobTitle = document.getElementById("jobTitle").value;
+  var location = document.getElementById("location").value;
+  var url = "";   
+
+  if (jobTitle === "software engineer" && location === "coimbatore") {
+    url = "Software engineer coimbatore.html";
+  } 
+  else if (jobTitle === "software engineer" && location === "chennai") {
+    url = "Software engineer chennai.html";
+  } 
+  else if (jobTitle === "software engineer" && location === "bangalore") {
+    url = "Software engineer bangalore.html";
+  } 
+  else if (jobTitle === "Data Analyst" && location === "coimbatore") {
+    url = "Data Analyst coimbatore.html";
+  } 
+  else if (jobTitle === "Data Analyst" && location === "chennai") {
+    url = "Data Analyst chennai.html";
+  } 
+  else if (jobTitle === "Data Analyst" && location === "bangalore") {
+    url = "Data Analyst bangalore.html";
+  } 
+  else if (jobTitle === "Work-from-home" && location === ["chennai","bangalore","coimbatore","Anywhere in India"].includes(location)) {
+     url = "work from home.html";
+      } 
+else if (jobTitle === "Project Manager" && location === ["chennai","bangalore","coimbatore","Anywhere in India"].includes(location)) {
+     url = "project manager.html";
+      } 
+  else {
+    url = "logo.html";
+  }
+
+  window.location.href = url;
+}
+</script>
+
+<style>
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+position:relative;
+top:-80px;
+}
+li {
+float: right;
+}
+li a {
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size:21px;
+}
+.job-card {
+      margin-bottom: 20px;
+    }
+
+    .job-card img {
+      max-width: 100%;
+      height: auto;
+    }
+	 .div{
+            width:100%;
+            margin: auto;
+			padding: 20px;
+            background-color:#faf6f2;
+        }
+        
+
+        .events-section {
+            margin-top: 30px;
+        }
+
+        .event-card {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+		body, html {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    footer {
+      font-family: Arial, sans-serif;
+      background-color: #02043b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-text {
+      color: white;
+    }
+    .fa {
+      font-size: 30px;
+      margin: 5px;
+      border-radius: 50%;
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+	.success-story {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .story-card {
+            width: 30%;
+            height: 410px;
+            background-color:#b3daff;
+            border-radius: 8px;
+            padding: 20px;
+       
+        }
+
+        .story-card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 8px;
+            margin-bottom: -3px;
+        }
+		
+</style>
+<body>
+<nav class="navbar navbar--sm navbar-white bg-white" style="width:200px;">
+  <div class="container">
+    <a class="navbar-brand" href="job logo.html">
+      <img src="logo.jpg" alt="logo" style="width:70px;margin-left:30px;" class="rounded-pill">
+    </a>
+  </div>
+</nav>
+
+<ul>
+<li><a href="Employers post a job.html">Employers/postjob</a></li>
+<li><a href="create a profile.html">profile</a></li>
+<li><a href="About us.html">About us</a></li>
+<li><a href="job junction.html">Home</a></li>
+<li><a href="sign up page.html" class="btn btn-success" style="position:relative;top:10px;">sign Up</a></li>
+</ul>
+<form style="margin-left:200px;margin-top:-40px;">
+<label for="jobTitle">Job Title:</label>
+<input list="jobTitles" id="jobTitle" name="jobTitle" placeholder="Enter job title">
+<datalist id="jobTitles">
+    <option value="software engineer">
+    <option value="Data Analyst">
+    <option value="Project Manager">
+    <option value="Work-from-home">
+</datalist>
+
+<br>
+<div style="margin-top:-30px;float:right;margin-right:630px;">
+<label for="location">Location</label>
+<input list="locations" id="location" name="location" placeholder="Enter location">
+<datalist id="locations">
+<option value="coimbatore">
+<option value="chennai">
+<option value="Bangalore">
+<option value="Anywhere in India">
+</datalist>
+<br>
+</div>
+<button type="button" onclick="findJobs()" style="position:relative;top:20px;margin-left:220px;">Find Jobs</button>
+</form>
+
+<div id="demo" class="carousel slide" data-bs-ride="carousel" style="margin-top:30px;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="job.jpg" alt="Los Angeles" class="d-block" style="width:100%;height:600px;">
+      
+    </div>
+    <div class="carousel-item">
+      <img src="job3.jpeg" alt="Chicago" class="d-block" style="width:100%;height:600px;">
+</div>
+    <div class="carousel-item">
+      <img src="job3.png" alt="New York" class="d-block" style="width:100%;height:600px;">
+       
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+  </div>
+<div class="container mt-5">
+    <h2 class="mb-4">Featured Jobs</h2>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card job-card">
+          <img src="soft.gif" class="card-img-top" alt="Software Engineer Job Image" style="position:relative;height:230px;">
+          <div class="card-body">
+            <h5 class="card-title">Software Engineer</h5>
+            <p class="card-text">Join our team as a Software Engineer and work on cutting-edge projects. This is a remote work opportunity.</p>
+            <a href="#" class="btn btn-primary">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card job-card">
+          <img src="data ana.gif" class="card-img-top" alt="Data Analyst Job Image">
+          <div class="card-body">
+            <h5 class="card-title">Data Analyst</h5>
+            <p class="card-text">We are hiring a Data Analyst to analyze and interpret complex data sets. This position allows you to work from the comfort of your home.</p>
+            <a href="#" class="btn btn-primary">Apply Now</a>
+          </div>
+        </div>
+      </div>
+<div class="col-md-4">
+        <div class="card job-card">
+          <img src="developer.gif" class="card-img-top" alt="Developer Job Image">
+          <div class="card-body">
+            <h5 class="card-title">Developer</h5>
+            <p class="card-text">Exciting opportunity for a Developer to work remotely. Join our dynamic team and contribute to the development of innovative solutions.</p>
+            <a href="#" class="btn btn-primary">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="div">
+        <div class="events-section">
+            <h2 style="text-align:center;">Upcoming Events</h2>
+            <div class="event-card">
+                <h4>Job Fair: Tech Expo 2023</h4>
+                <p>Date: April 15, 2023</p>
+                <p>Location: Convention Center, City</p>
+                <p>Description: Explore opportunities in the tech industry. Connect with top companies.</p>
+                <button class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="event-card">
+                <h4>Webinar: Mastering Resume Writing</h4>
+                <p>Date: April 20, 2023</p>
+                <p>Location: Online</p>
+                <p>Description: Learn essential tips for creating a standout resume from industry experts.</p>
+                <a href="register form.html"class="btn btn-primary">Register Now</a>
+            </div>
+        </div>
+    </div>
+	<div  style="font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;">
+    <h1 style="text-align:center;padding: 20px;
+            color:#02043b;">Job Board Success Stories</h1>
+
+    <div class="success-story">
+        <div class="story-card">
+            <img src="john.jpg" alt="John's Career Breakthrough">
+            <h2 style="color: #333;">John's Career Breakthrough</h2>
+            <p style="color:#000000;
+            line-height: 1.3;">John had been searching for a challenging role in software development for months without much success. He decided to try out XYZ Job Board Platform and quickly found a position that matched his skills and career goals. Now, he's thriving in his new job and is grateful for the platform that made it all possible.</p>
+        </div>
+
+        <div class="story-card">
+            <img src="tech.jpg" alt="Tech Company Finds Top Talent">
+            <h2 style="color: #333;">Tech Company Finds Top Talent</h2>
+            <p  style="color:#000000;
+            line-height: 1.3;">ABC Tech Solutions was struggling to find experienced data scientists for their latest project. After posting their job openings on the LMN Job Board Platform, they received a flood of qualified applications. The platform's advanced filtering and matching algorithms helped them identify and hire the perfect candidates, ensuring the success of their project.</p>
+        </div>
+
+        <div class="story-card">
+            <img src="startup.jpg" alt="Startup Launches with Top Talent">
+            <h2 style="color: #333;">Startup Launches with Top Talent</h2>
+            <p  style="color:#000000;
+            line-height: 1.3;">A newly founded startup, Startup Innovators, needed to quickly build a team of skilled professionals. By leveraging the QuickHire Job Board, they were able to identify and hire a group of talented individuals who played a crucial role in launching their product ahead of schedule.</p>
+        </div>
+    </div>
+	</div>
+	<footer>
+    <div class="container">
+      <div>
+        <h3>About Our Job Junction Platform</h3>
+        <p>We strive to connect employers with qualified candidates and provide a seamless job-seeking experience. Our platform is designed to make the hiring process efficient and effective for both employers and job seekers.</p>
+        <p>Join us in building a better future for employment opportunities.</p>
+        <p class="footer-text">&copy; 2023 Job Junction</p>
+      </div>
+      <div>
+        <h4>Contact us:</h4>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@jobjunction.com</p>
+        <p>Address: 123 Main Street, City, State, ZIP</p>
+      </div>
+      <div>
+        <h4>Connect with us:</h4>
+        <a href="https://www.facebook.com" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://www.twitter.com" class="fa fa-twitter" target="_blank"></a>
+        <a href="https://www.linkedin.com" class="fa fa-linkedin" target="_blank"></a>
+      </div>
+      <div>
+        <h4>Legal:</h4>
+        <a href="privacy-policy.html" style="text-decoration:none;color:white;">Privacy Policy</a><br>
+        <a href="terms-of-service.html"style="text-decoration:none;color:white;">Terms of Service</a>
+      </div>
+      <div>
+        <h4>Job Categories:</h4>
+        <p>Engineering</p>
+        <p>Sales</p>
+        <p>Healthcare</p>
+      </div>
+      <div>
+        <h4>FAQs:</h4>
+        <p><a href="faq.html">Frequently Asked Questions</a></p>
+      </div>
+    </div>
+  </footer>
+  
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

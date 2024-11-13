@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Manager Job Post</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    .job-post {
+      background-color: #ffffff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-details h2 {
+      color: #007bff;
+    }
+
+    .job-details p {
+      margin-top: 15px;
+    }
+
+    .registration-form {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .btn-submit {
+      background-color: #28a745;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+
+        <!-- Job Post Section -->
+        <div class="job-post">
+          <div class="job-details">
+            <h2>HR Manager</h2>
+            <p>Location: City, Country</p>
+            <p>Company: ABC Tech</p>
+            <p>Posted on: January 1, 2023</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget...</p>
+          </div>
+        </div>
+
+        <!-- Registration Form Section -->
+        <div class="registration-form">
+          <h2>Apply for HR Manager Position</h2>
+          <form>
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="resume">Resume (PDF)</label>
+              <input type="file" class="form-control-file" id="resume" accept=".pdf" required>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Submit Application</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+   
+  
+</body>
+</html>
